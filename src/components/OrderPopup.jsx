@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { X, MapPin, ArrowRight, ExternalLink, Navigation } from 'lucide-react'
-import '../styles/OrderPopup.css'
+import '../styles/Orderpopup.css'
 
 const locations = [
   { id: 1, name: 'Memorial City Mall',  city: 'Houston, TX',      address: '303 Memorial City Mall, Suite 395H',  status: 'Open',        slug: 'memorial-city', orderUrl: 'https://ordering-bowldmasala.com/home' },
