@@ -163,6 +163,8 @@
   margin-top: 0.5rem;
   border-radius: 12px !important;
   font-weight: 700 !important;
+  width: 120px;
+  height: 40px;
 }
 
 /* ── Responsive ── */

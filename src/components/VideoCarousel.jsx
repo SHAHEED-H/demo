@@ -4,9 +4,9 @@ import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
 import '../styles/VideoCarousel.css'
 
 const slides = [
-  { id: 1, src: '/vid6.mp4',  poster: 'src/assets/catring.jpeg', title: 'Catering Events', sub: 'We Come to You'   },
-  { id: 2, src: '/vid2.mp4',  poster: 'src/assets/bestbnn.jpg', title: 'Masala Magic',         sub: 'Behind the Scenes'   },
-  { id: 3, src: '/vid3.mp4',  poster: 'src/assets/dish15.jpeg', title: 'Kati Rolls',       sub: 'Freshly Wrapped' },
+  { id: 1, src: '/vid6.mp4',  poster: '/catring.jpeg', title: 'Catering Events', sub: 'We Come to You'   },
+  { id: 2, src: '/vid2.mp4',  poster: '/bestbnn.jpg', title: 'Masala Magic',         sub: 'Behind the Scenes'   },
+  { id: 3, src: '/vid3.mp4',  poster: '/dish15.jpeg', title: 'Kati Rolls',       sub: 'Freshly Wrapped' },
   { id: 4, src: '/vid4.mp4',  poster: '/dish13.jpg', title: 'Samosa Chaat',       sub: 'Street Food Vibes' },
   { id: 5, src: '/vid1.mp4',  poster: '/dish8.jpg', title: 'Chicken Tikka Bowl',    sub: 'Our Best Seller'    },
 ]
