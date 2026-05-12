@@ -1,0 +1,295 @@
+/* ═══════════════════════════════════════════════
+   VIDEO CAROUSEL
+   Thumbnails always visible on side cards
+   Spring physics transition · 3D perspective
+═══════════════════════════════════════════════ */
+
+/* ── Section ── */
+.vc-section {
+  background: #fdf8f2;
+  padding: 5rem 0 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.vc-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e8d5bb, transparent);
+}
+
+/* ── Header ── */
+.vc-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-inline: 1.5rem;
+}
+.vc-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #e8892b;
+  margin-bottom: 0.55rem;
+}
+.vc-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: #1e140a;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0;
+}
+.vc-title em { font-style: italic; color: #e8892b; }
+
+/* ── Stage wrapper ── */
+.vc-stage-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0 3rem;
+}
+
+/* ── Stage — 3D perspective container ── */
+.vc-stage {
+  position: relative;
+  width: 300px;       /* matches center card width */
+  height: 460px;      /* matches center card height */
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+/* ── Card base ── */
+.vc-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 460px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #1a0e06;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  transition: box-shadow 0.35s ease;
+}
+
+/* ── Thumbnail image (always visible) ── */
+.vc-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Video (sits on top of thumb, only shown when playing) ── */
+.vc-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+/* Video fades in only when it's the center card */
+.vc-video--visible {
+  opacity: 1;
+}
+
+/* ── Active card ring + shadow ── */
+.vc-card--active {
+  box-shadow:
+    0 0 0 2.5px #e8892b,
+    0 24px 64px rgba(42,26,14,0.3),
+    0 6px 16px rgba(42,26,14,0.12);
+}
+
+/* ── Glow behind active card ── */
+.vc-glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(ellipse, rgba(232,137,43,0.18) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+/* ── Side card overlay with play icon ── */
+.vc-side-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: rgba(10, 5, 2, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  border-radius: inherit;
+}
+.vc-card:not(.vc-card--active):hover .vc-side-overlay {
+  background: rgba(10, 5, 2, 0.15);
+}
+
+.vc-play-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.vc-card:not(.vc-card--active):hover .vc-play-btn {
+  background: rgba(232, 137, 43, 0.65);
+  transform: scale(1.12);
+}
+
+/* ── Progress bar ── */
+.vc-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 6;
+  border-radius: 0 0 22px 22px;
+}
+.vc-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e8892b, #f4a84a);
+  border-radius: 0 2px 2px 0;
+  min-width: 2px;
+}
+
+/* ── Info pill ── */
+.vc-info {
+  position: absolute;
+  bottom: 14px;
+  left: 12px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(10, 5, 2, 0.68);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.6rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.vc-info-sub {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e8892b;
+}
+.vc-info-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* ── Nav buttons ── */
+.vc-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #e8d5bb;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #5c3d20;
+  z-index: 20;
+  box-shadow: 0 4px 16px rgba(42, 26, 14, 0.1);
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.vc-nav:hover {
+  background: #e8892b;
+  border-color: #e8892b;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+.vc-nav--prev { left: -60px; }
+.vc-nav--next { right: -60px; }
+
+/* ── Dots ── */
+.vc-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding-top: 0.5rem;
+}
+.vc-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d4b896;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.vc-dot--on {
+  background: #e8892b;
+  width: 22px;
+  border-radius: 4px;
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 900px) {
+  .vc-nav--prev { left: -48px; }
+  .vc-nav--next { right: -48px; }
+}
+
+@media (max-width: 680px) {
+  .vc-stage,
+  .vc-card {
+    width: 240px;
+    height: 380px;
+  }
+  .vc-nav--prev { left: -44px; }
+  .vc-nav--next { right: -44px; }
+}
+
+@media (max-width: 480px) {
+  .vc-section { padding: 3.5rem 0 3rem; }
+  .vc-stage,
+  .vc-card {
+    width: 200px;
+    height: 320px;
+  }
+  .vc-nav--prev { left: -38px; }
+  .vc-nav--next { right: -38px; }
+  .vc-nav { width: 34px; height: 34px; }
+}

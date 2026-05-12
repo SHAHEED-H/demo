@@ -1,0 +1,487 @@
+/* ═══════════════════════════════════════════════
+   CATERING PAGE — Aesthetic Form
+   Banner · Split layout · Styled form fields
+   Responsive: Phone · Tablet · Desktop
+═══════════════════════════════════════════════ */
+
+/* ── Container ── */
+.cp-container {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* ═══════════════════════════════
+   BANNER
+═══════════════════════════════ */
+.cp-banner {
+  background-image: url('../assets/menubn.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 9rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,5,2,0.72) 0%,
+    rgba(10,5,2,0.58) 45%,
+    rgba(10,5,2,0.75) 100%
+  );
+  z-index: 0;
+}
+
+.cp-banner-inner {
+  width: 90%;
+  max-width: 800px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cp-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #f4a84a;
+  margin-bottom: 0.9rem;
+}
+
+.cp-banner-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+.cp-banner-title em { font-style: italic; color: #f4a84a; }
+
+.cp-banner-sub {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  max-width: 560px;
+  margin-inline: auto;
+  line-height: 1.8;
+}
+
+.cp-wave {
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 60px; z-index: 2;
+  pointer-events: none;
+}
+.cp-wave svg { width: 100%; height: 100%; display: block; }
+
+/* ═══════════════════════════════
+   BODY
+═══════════════════════════════ */
+.cp-body {
+  background: #fdf8f2;
+  padding: 4.5rem 0 5.5rem;
+}
+
+/* Two-column layout */
+.cp-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* ═══════════════════════════════
+   ASIDE — left info column
+═══════════════════════════════ */
+.cp-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.cp-aside-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #e8892b;
+}
+
+.cp-aside-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 2.8vw, 2.4rem);
+  font-weight: 900;
+  color: #1e140a;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.cp-aside-title em { font-style: italic; color: #e8892b; }
+
+.cp-aside-body {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: #7a5c3c;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Perks list */
+.cp-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cp-perk {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #5c3d20;
+}
+
+.cp-perk-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #fff;
+  border: 1px solid #ecdcc6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8892b;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+.cp-perk:hover .cp-perk-icon {
+  background: #e8892b;
+  border-color: #e8892b;
+  color: #fff;
+}
+
+/* Contact box */
+.cp-contact-box {
+  background: #fff;
+  border: 1px solid #ecdcc6;
+  border-radius: 18px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 4px 14px rgba(42,26,14,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.cp-contact-title {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b0947a;
+  margin: 0;
+}
+
+.cp-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1e140a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.cp-contact-link:hover { color: #e8892b; }
+.cp-contact-link--sm  { font-size: 0.82rem; font-weight: 500; color: #7a5c3c; }
+
+/* ═══════════════════════════════
+   FORM CARD
+═══════════════════════════════ */
+.cp-form-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #ecdcc6;
+  box-shadow:
+    0 4px 6px rgba(42,26,14,0.03),
+    0 16px 40px rgba(42,26,14,0.09);
+  overflow: hidden;
+}
+
+.cp-form-head {
+  padding: 1.8rem 2rem 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cp-form-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #1e140a;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.cp-form-note {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #b0947a;
+  margin: 0;
+}
+
+form {
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+/* ── Two-col grid for paired fields ── */
+.cf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ── Field wrapper ── */
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+/* ── Label ── */
+.cf-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #5c3d20;
+  letter-spacing: 0.02em;
+}
+
+.cf-label-icon { color: #e8892b; flex-shrink: 0; }
+
+.cf-req {
+  color: #e8892b;
+  font-weight: 800;
+}
+
+/* ── Input / Select base ── */
+.cf-input,
+.cf-select,
+.cf-textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: #1e140a;
+  background: #fdf8f2;
+  border: 1.5px solid #e8d5bb;
+  border-radius: 12px;
+  padding: 0.72rem 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.cf-input::placeholder,
+.cf-textarea::placeholder {
+  color: #c4a882;
+}
+
+.cf-input:focus,
+.cf-select:focus,
+.cf-textarea:focus {
+  border-color: #e8892b;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(232,137,43,0.12);
+}
+
+/* Select arrow */
+.cf-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23e8892b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* Textarea */
+.cf-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ── Date input fix ── */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* ── Marketing consent ── */
+.cf-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 1rem;
+  background: #fdf0e0;
+  border: 1.5px solid #ecdcc6;
+  border-radius: 14px;
+  transition: border-color 0.2s;
+}
+.cf-consent:hover { border-color: #e8892b; }
+
+.cf-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d4b896;
+  border-radius: 5px;
+  accent-color: #e8892b;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.cf-consent-text {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #7a5c3c;
+  line-height: 1.65;
+}
+
+.cf-consent-link {
+  color: #e8892b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Submit button ── */
+.cp-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  background: #e8892b;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(232,137,43,0.38);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 0.25rem;
+  letter-spacing: 0.02em;
+}
+.cp-submit:hover {
+  background: #c97018;
+  box-shadow: 0 10px 28px rgba(232,137,43,0.48);
+}
+
+/* ── Success state ── */
+.cp-success {
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.cp-success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #e8f5ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a9e5a;
+}
+.cp-success h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1e140a;
+  margin: 0;
+}
+.cp-success p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: #7a5c3c;
+  max-width: 340px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE — TABLET (≤ 1024px)
+═══════════════════════════════ */
+@media (max-width: 1024px) {
+  .cp-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .cp-aside {
+    position: static;
+    max-width: 600px;
+    text-align: center;
+    align-items: center;
+    margin-inline: auto;
+  }
+  .cp-perks { text-align: left; }
+  .cp-contact-box { width: 100%; max-width: 420px; }
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE — PHONE (≤ 640px)
+═══════════════════════════════ */
+@media (max-width: 640px) {
+  .cp-banner { padding: 7rem 0 4.5rem; background-attachment: scroll; }
+  .cp-body   { padding: 3rem 0 4rem; }
+  .cf-grid   { grid-template-columns: 1fr; }
+  .cp-form-card { border-radius: 18px; }
+  .cp-form-head,
+  form { padding-inline: 1.25rem; }
+  .cp-form-head { padding-top: 1.4rem; }
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE — SMALL (≤ 380px)
+═══════════════════════════════ */
+@media (max-width: 380px) {
+  .cp-container { width: 95%; }
+  .cp-form-head,
+  form { padding-inline: 1rem; }
+}

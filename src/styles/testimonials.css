@@ -1,0 +1,276 @@
+/* ═══════════════════════════════
+   TESTIMONIAL SECTION
+   MATCHING SITE THEME
+═══════════════════════════════ */
+
+.testimonial-section{
+  position:relative;
+
+  padding:2rem 0;
+
+  overflow:hidden;
+
+  background:#0f0a06;
+}
+
+/* ================= BACKGROUND ================= */
+
+.testimonial-section::before{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background-image:url('/src/assets/bestbnn.jpg');
+  background-size:cover;
+  background-position:center;
+
+  opacity:.12;
+
+  transform:scale(1.05);
+
+  pointer-events:none;
+}
+
+.testimonial-section::after{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(10,5,2,.82),
+      rgba(10,5,2,.65),
+      rgba(10,5,2,.86)
+    );
+
+  z-index:1;
+}
+
+/* ================= GLOW ================= */
+
+.testimonial-glow{
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(232,137,43,.22) 0%,
+      transparent 70%
+    );
+
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%, -50%);
+
+  filter:blur(120px);
+
+  z-index:0;
+}
+
+/* ================= HEADER ================= */
+
+.testimonial-header{
+  text-align:center;
+
+  margin-bottom:4rem;
+
+  position:relative;
+  z-index:2;
+}
+
+.testimonial-header span{
+  color:#f4a84a;
+
+  letter-spacing:.28em;
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+}
+
+.testimonial-header h2{
+  font-family:var(--font-serif);
+
+  color:#fff;
+
+  font-size:clamp(2.5rem,5vw,4rem);
+
+  line-height:1.05;
+
+  margin-top:1rem;
+
+  font-weight:900;
+
+  text-shadow:
+    0 5px 20px rgba(0,0,0,.35);
+}
+
+/* ================= SLIDER ================= */
+
+.testimonial-slider{
+  overflow:hidden;
+
+  position:relative;
+  z-index:2;
+}
+
+.testimonial-track{
+  display:flex;
+  gap:2rem;
+
+  width:max-content;
+}
+
+/* ================= CARD ================= */
+
+.testimonial-card{
+  width:420px;
+  min-width:420px;
+
+  padding:2rem;
+
+  border-radius:32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.14),
+      rgba(255,255,255,.05)
+    );
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.22),
+    inset 0 1px 1px rgba(255,255,255,.08);
+
+  transition:
+    transform .4s cubic-bezier(.22,1,.36,1),
+    border-color .4s ease,
+    background .4s ease;
+}
+
+.testimonial-card:hover{
+  transform:
+    translateY(-8px)
+    scale(1.01);
+
+  border-color:
+    rgba(255,255,255,.18);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.18),
+      rgba(255,255,255,.08)
+    );
+}
+
+/* ================= STARS ================= */
+
+.testimonial-stars{
+  display:flex;
+  gap:.4rem;
+
+  margin-bottom:1.5rem;
+}
+
+/* ================= TEXT ================= */
+
+.testimonial-text{
+  color:rgba(255,255,255,.82);
+
+  line-height:1.9;
+
+  font-size:.96rem;
+
+  margin-bottom:2rem;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,.22);
+}
+
+/* ================= USER ================= */
+
+.testimonial-user{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.testimonial-user img{
+  width:58px;
+  height:58px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:2px solid rgba(255,255,255,.12);
+
+  box-shadow:
+    0 5px 14px rgba(0,0,0,.18);
+}
+
+.testimonial-user h4{
+  font-family:var(--font-serif);
+
+  color:#fff;
+
+  font-size:1rem;
+
+  margin-bottom:.2rem;
+
+  font-weight:700;
+}
+
+.testimonial-user span{
+  color:rgba(255,255,255,.58);
+
+  font-size:.82rem;
+
+  letter-spacing:.03em;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .testimonial-section{
+    padding:5rem 0;
+  }
+
+  .testimonial-card{
+    width:320px;
+    min-width:320px;
+
+    padding:1.5rem;
+
+    border-radius:24px;
+  }
+
+  .testimonial-header{
+    margin-bottom:3rem;
+  }
+
+  .testimonial-header h2{
+    font-size:2.3rem;
+  }
+
+  .testimonial-text{
+    font-size:.9rem;
+    line-height:1.8;
+  }
+}
