@@ -149,7 +149,7 @@ export default function MasalaMagicPage() {
 
           <motion.div className="mm-img-wrap" {...fadeUp(0.2)}>
             <img
-              src="/src/assets/dish10.jpeg"
+              src="/dish10.jpeg"
               alt="Bowl'd Masala"
             />
           </motion.div>

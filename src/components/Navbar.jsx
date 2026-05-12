@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import OrderPopup from './OrderPopup'
 import '../styles/navbar.css'
 
-import logo from '../assets/logo1.png'
+import logo from '/logo1.png'
 
 const navLinks = [
   { label: 'Menu',                  to: '/menu'         },

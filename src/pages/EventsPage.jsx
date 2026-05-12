@@ -10,14 +10,14 @@ import '../styles/EventsPage.css'
 
 /* EVENT IMAGES */
 
-import img1 from '../assets/Mothers Day.jpg'
-import img2 from '../assets/Memorial Day.jpg'
-import img3 from '../assets/National Egg Day.jpg'
-import img4 from '../assets/National Egg Roll Day.jpg'
-import img5 from '../assets/Fathers Day.jpg'
-import img6 from '../assets/4th of July.jpg'
-import img7 from '../assets/National French Fry Day.jpg'
-import img8 from '../assets/National Chicken Wing Day.jpg'
+import img1 from '/Mothers Day.jpg'
+import img2 from '/Memorial Day.jpg'
+import img3 from '/National Egg Day.jpg'
+import img4 from '/National Egg Roll Day.jpg'
+import img5 from '/Fathers Day.jpg'
+import img6 from '/4th of July.jpg'
+import img7 from '/National French Fry Day.jpg'
+import img8 from '/National Chicken Wing Day.jpg'
 
 /* EVENTS */
 

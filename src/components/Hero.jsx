@@ -28,10 +28,10 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/src/assets/banner.png"
+        poster="/banner.png"
       >
-        <source src="/src/assets/video_preview_h264.mp4"/>
-        <source src="/src/assets/hero-video.webm" type="video/webm" />
+        <source src="/video_preview_h264.mp4"/>
+        <source src="/hero-video.webm" type="video/webm" />
       </video>
       <div className="hero-overlay" />
 

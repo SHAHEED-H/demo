@@ -10,30 +10,30 @@ import '../styles/MenuPage.css'
 // ── Menu Data ─────────────────────────────────────────────────
 const menuData = {
   Appetizers: [
-    { id: 1,  name: 'Samosa Chaat',           desc: 'Crispy samosas topped with tamarind chutney, yogurt & spices', price: '$8.99',  badge: 'Veg',        badgeType: 'veg',  img: '/src/assets/dish13.jpg' },
-    { id: 2,  name: 'Masala Fries',            desc: 'Crispy fries tossed with our secret masala blend',             price: '$6.99',  badge: 'Veg',        badgeType: 'veg',  img: '/src/assets/dish7.jpeg' },
-    { id: 3,  name: 'Vegetable Samosa',         desc: 'Crispy golden pastry pockets filled with a flavorful mix of spiced vegetables in every bite.',          price: '$10.99', badge: 'veg',        badgeType: 'veg',  img: '/src/assets/dish12.jpg' },
-    { id: 4,  name: 'Masala Chai',             desc: 'Spiced Indian tea with ginger, cardamom & cinnamon',           price: '$3.99',  badge: 'Veg',        badgeType: 'veg',  img: '/src/assets/dish14.png' },
+    { id: 1,  name: 'Samosa Chaat',           desc: 'Crispy samosas topped with tamarind chutney, yogurt & spices', price: '$8.99',  badge: 'Veg',        badgeType: 'veg',  img: '/dish13.jpg' },
+    { id: 2,  name: 'Masala Fries',            desc: 'Crispy fries tossed with our secret masala blend',             price: '$6.99',  badge: 'Veg',        badgeType: 'veg',  img: '/dish7.jpeg' },
+    { id: 3,  name: 'Vegetable Samosa',         desc: 'Crispy golden pastry pockets filled with a flavorful mix of spiced vegetables in every bite.',          price: '$10.99', badge: 'veg',        badgeType: 'veg',  img: '/dish12.jpg' },
+    { id: 4,  name: 'Masala Chai',             desc: 'Spiced Indian tea with ginger, cardamom & cinnamon',           price: '$3.99',  badge: 'Veg',        badgeType: 'veg',  img: '/dish14.png' },
   ],
   Bowls: [
-    { id: 5,  name: 'Chicken Tikka Bowl',      desc: 'Tender chicken tikka on fragrant basmati rice with raita',     price: '$13.99', badge: 'Best Seller', badgeType: 'best', img: '/src/assets/dish8.jpg' },
-    { id: 6,  name: 'Masala Aloo Bowl',        desc: 'Spiced potatoes in a rich tomato masala over basmati rice',    price: '$11.99', badge: 'Veg',        badgeType: 'veg',  img: '/src/assets/dish9.jpg' },
-    { id: 7,  name: 'Vegetable Bowl',          desc: 'Seasonal vegetables in a fragrant curry sauce with rice',      price: '$11.49', badge: 'Veg',        badgeType: 'veg',  img: '/src/assets/dish6.jpeg' },
-    { id: 8,  name: 'Spicy Keema Bowl',        desc: 'Minced meat slow-cooked with aromatic spices over rice',       price: '$13.49', badge: 'Spicy',      badgeType: 'hot',  img: '/src/assets/dish11.jpg' },
+    { id: 5,  name: 'Chicken Tikka Bowl',      desc: 'Tender chicken tikka on fragrant basmati rice with raita',     price: '$13.99', badge: 'Best Seller', badgeType: 'best', img: '/dish8.jpg' },
+    { id: 6,  name: 'Masala Aloo Bowl',        desc: 'Spiced potatoes in a rich tomato masala over basmati rice',    price: '$11.99', badge: 'Veg',        badgeType: 'veg',  img: '/dish9.jpg' },
+    { id: 7,  name: 'Vegetable Bowl',          desc: 'Seasonal vegetables in a fragrant curry sauce with rice',      price: '$11.49', badge: 'Veg',        badgeType: 'veg',  img: '/dish6.jpeg' },
+    { id: 8,  name: 'Spicy Keema Bowl',        desc: 'Minced meat slow-cooked with aromatic spices over rice',       price: '$13.49', badge: 'Spicy',      badgeType: 'hot',  img: '/dish11.jpg' },
   ],
   Rolls: [
-    { id: 9,  name: 'Cilantro Chicken Roll',   desc: 'Juicy chicken with cilantro, onions & green chutney',          price: '$11.99', badge: 'Popular',    badgeType: 'best', img: '/src/assets/dish18.jpg' },
-    { id: 10, name: 'Paneer Tikka Roll',       desc: 'Smoky paneer with pickled onions in a flaky paratha',          price: '$10.99', badge: 'Veg',        badgeType: 'veg',  img: '/src/assets/dish2.jpeg' },
-    { id: 11, name: 'Egg Tandoori Paneer Roll',desc: 'Tandoori paneer in egg-dipped paratha with mint sauce',        price: '$11.49', badge: 'Chef Pick',  badgeType: 'chef', img: '/src/assets/dish15.jpeg' },
-    { id: 12, name: "Plant-Based Chick'n Roll",desc: "Our plant-based kati roll — bold and delicious",               price: '$12.49', badge: 'Vegan',      badgeType: 'veg',  img: '/src/assets/dish16.jpeg' },
-    { id: 13, name: 'Spicy Keema Egg Roll',    desc: 'Spiced minced meat wrapped in a crispy egg roll',              price: '$11.99', badge: 'Spicy',      badgeType: 'hot',  img: '/src/assets/dish17.jpeg' },
+    { id: 9,  name: 'Cilantro Chicken Roll',   desc: 'Juicy chicken with cilantro, onions & green chutney',          price: '$11.99', badge: 'Popular',    badgeType: 'best', img: '/dish18.jpg' },
+    { id: 10, name: 'Paneer Tikka Roll',       desc: 'Smoky paneer with pickled onions in a flaky paratha',          price: '$10.99', badge: 'Veg',        badgeType: 'veg',  img: '/dish2.jpeg' },
+    { id: 11, name: 'Egg Tandoori Paneer Roll',desc: 'Tandoori paneer in egg-dipped paratha with mint sauce',        price: '$11.49', badge: 'Chef Pick',  badgeType: 'chef', img: '/dish15.jpeg' },
+    { id: 12, name: "Plant-Based Chick'n Roll",desc: "Our plant-based kati roll — bold and delicious",               price: '$12.49', badge: 'Vegan',      badgeType: 'veg',  img: '/dish16.jpeg' },
+    { id: 13, name: 'Spicy Keema Egg Roll',    desc: 'Spiced minced meat wrapped in a crispy egg roll',              price: '$11.99', badge: 'Spicy',      badgeType: 'hot',  img: '/dish17.jpeg' },
   ],
   Desserts: [
-    { id: 14, name: 'Gulab Jamun',             desc: 'Soft dumplings soaked in rose-flavored sugar syrup',           price: '$4.99',  badge: 'Sweet',      badgeType: 'sweet', img: '/src/assets/dish3.jpg' },
+    { id: 14, name: 'Gulab Jamun',             desc: 'Soft dumplings soaked in rose-flavored sugar syrup',           price: '$4.99',  badge: 'Sweet',      badgeType: 'sweet', img: '/dish3.jpg' },
   ],
   Drinks: [
-    { id: 15, name: 'Masala Chai',             desc: 'Classic Indian spiced tea',                                    price: '$3.99',  badge: 'Hot',        badgeType: 'hot',  img: '/src/assets/dish14.png' },
-    { id: 16, name: 'Mango Lassi',             desc: 'Creamy yogurt drink blended with sweet Alphonso mango',        price: '$4.99',  badge: 'Cold',       badgeType: 'veg',  img: '/src/assets/dish5.jpeg'}
+    { id: 15, name: 'Masala Chai',             desc: 'Classic Indian spiced tea',                                    price: '$3.99',  badge: 'Hot',        badgeType: 'hot',  img: '/dish14.png' },
+    { id: 16, name: 'Mango Lassi',             desc: 'Creamy yogurt drink blended with sweet Alphonso mango',        price: '$4.99',  badge: 'Cold',       badgeType: 'veg',  img: '/dish5.jpeg'}
   ],
 }
 

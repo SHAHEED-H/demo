@@ -11,7 +11,7 @@
   padding:9rem 0 6rem;
   overflow:hidden;
   text-align:center;
-  background-image:url('../assets/menubn.png');
+  background-image:url('/menubn.png');
   background-size:cover;
   background-position:center;
 }

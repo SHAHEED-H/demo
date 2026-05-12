@@ -17,7 +17,7 @@ const locations = [
     timing: '10:00 AM - 10:00 PM',
 
     icon:
-      '/src/assets/PHILADELPHIA.jpg',
+      '/PHILADELPHIA.jpg',
 
     images: [
       'https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1400&auto=format&fit=crop',
@@ -32,7 +32,7 @@ const locations = [
     timing: '11:00 AM - 11:00 PM',
 
     icon:
-      '/src/assets/WILMINGTON.jpg',
+      '/WILMINGTON.jpg',
 
     images: [
       'https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1400&auto=format&fit=crop',
@@ -47,7 +47,7 @@ const locations = [
     timing: '10:00 AM - 11:00 PM',
 
     icon:
-      '/src/assets/HOUSTON.jpg',
+      '/HOUSTON.jpg',
 
     images: [
       'https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1400&auto=format&fit=crop',
@@ -62,7 +62,7 @@ const locations = [
     timing: '11:00 AM - 10:00 PM',
 
     icon:
-      '/src/assets/DENVER.jpg',
+      '/DENVER.jpg',
 
     images: [
       'https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1400&auto=format&fit=crop',
@@ -77,7 +77,7 @@ const locations = [
     timing: '10:00 AM - 10:00 PM',
 
     icon:
-      '/src/assets/RICHMOND.jpg',
+      '/RICHMOND.jpg',
 
     images: [
       'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400&auto=format&fit=crop',
@@ -92,7 +92,7 @@ const locations = [
     timing: '11:00 AM - 11:00 PM',
 
     icon:
-      '/src/assets/ARLINGTON.jpg',
+      '/ARLINGTON.jpg',
 
     images: [
       'https://images.unsplash.com/photo-1555992336-03a23c7b20ee?q=80&w=1400&auto=format&fit=crop',

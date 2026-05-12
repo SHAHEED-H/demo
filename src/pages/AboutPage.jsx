@@ -3,9 +3,9 @@ import { motion, useInView } from 'framer-motion'
 import { ArrowRight, Leaf, Zap, Award, Users, ShieldCheck, Clock } from 'lucide-react'
 import '../styles/Aboutpg.css'
 
-import img1 from '../assets/dish1.jpeg'
-import img2 from '../assets/dish2.jpeg'
-import img3 from '../assets/dish4.jpeg'
+import img1 from '/dish1.jpeg'
+import img2 from '/dish2.jpeg'
+import img3 from '/dish4.jpeg'
 
 const stats = [
   { value: '8+',   label: 'Locations'       },

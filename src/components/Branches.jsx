@@ -13,7 +13,7 @@ const branches = [
     city: 'Philadelphia',
     address: ' 3025 Market Street, , PA 19104',
     hours: 'Mon–Sat: 11am – 9Philadelphiapm',
-    img: '/src/assets/branch1.jpeg',
+    img: '/branch1.jpeg',
     slug: 'memorial-city',
   },
   {
@@ -22,7 +22,7 @@ const branches = [
     city: 'Wilmington',
     address: ' 1313 N Market St, Wilmington, DE 19801',
     hours: 'Mon–Sat: 10am – 9pm',
-    img: '/src/assets/branch2.jpeg',
+    img: '/branch2.jpeg',
     slug: 'katy-mills',
   },
   {
@@ -31,7 +31,7 @@ const branches = [
     city: 'Houston',
     address: 'Lyric Market, 411 Smith Street, Houston, TX 77002',
     hours: 'Mon–Sat: 11am – 9pm',
-    img: '/src/assets/branch3.jpeg',
+    img: '/branch3.jpeg',
     slug: 'woodlands',
   },
   {
@@ -40,7 +40,7 @@ const branches = [
     city: 'Denver',
     address: ' 2000 S Colorado Blvd, Building 4 (Junction Food & Drink), Denver, CO 80222',
     hours: 'Mon–Sat: 11am – 8pm',
-    img: '/src/assets/branch4.jpeg',
+    img: '/branch4.jpeg',
     slug: 'sugar-land',
   },
   {
@@ -49,7 +49,7 @@ const branches = [
     city: 'Richmond',
     address: ' 4828 Waterview Town Center Dr STE 800, Richmond, TX 77407',
     hours: 'Mon–Sat: 11am – 9pm',
-    img: '/src/assets/branch5.jpeg',
+    img: '/branch5.jpeg',
     slug: 'pearland',
   },
   {
@@ -58,7 +58,7 @@ const branches = [
     city: 'Houston',
     address: '303 Memorial City Mall Suite 395H, Houston, TX 77024',
     hours: 'Mon–Sat: 11am – 9pm',
-    img: '/src/assets/branch6.jpeg',
+    img: '/branch6.jpeg',
     slug: 'baybrook',
   },
   {
@@ -67,7 +67,7 @@ const branches = [
     city: 'Arlington',
     address: ' 1100 S Hayes St, Arlington, VA 22202',
     hours: 'Mon–Sat: 11am – 9pm',
-    img: '/src/assets/branch7.jpeg',
+    img: '/branch7.jpeg',
     slug: 'uptown-park',
   },
   {
@@ -76,7 +76,7 @@ const branches = [
     city: 'Pennsylvania',
     address: ' 160 N Gulph Rd King of Prussia, Pennsylvania',
     hours: 'Opening Soon',
-    img: '/src/assets/branch8.jpeg',
+    img: '/branch8.jpeg',
     slug: 'greenspoint',
   },
 ]

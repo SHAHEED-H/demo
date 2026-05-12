@@ -5,7 +5,7 @@ import {
   Cake, Coffee, Star, CheckCircle2
 } from 'lucide-react'
 import '../styles/Catering.css'
-import catringing from '../assets/catring.jpeg'
+import catringing from '/catring.jpeg'
 
 // ── Replace with your actual catering image ──
 const CATERING_IMG = catringing

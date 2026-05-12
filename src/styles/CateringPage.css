@@ -15,7 +15,7 @@
    BANNER
 ═══════════════════════════════ */
 .cp-banner {
-  background-image: url('../assets/menubn.png');
+  background-image: url('/menubn.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

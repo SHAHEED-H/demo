@@ -10,9 +10,9 @@ import {
 
 import '../styles/about.css'
 
-import img1 from '../assets/aboutsec.jpg'
-import img2 from '../assets/dish11.jpg'
-import img4 from '../assets/dish1.jpeg'
+import img1 from '/aboutsec.jpg'
+import img2 from '/dish11.jpg'
+import img4 from '/dish1.jpeg'
 
 const features = [
   { Icon: Leaf, text: 'Fresh ingredients daily' },

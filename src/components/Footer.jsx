@@ -6,7 +6,7 @@ import {
   Link, MessageCircle, Video,
   ArrowRight, ArrowUpRight, ChevronRight
 } from 'lucide-react'
-import logo from '../assets/logo1.png'   // ← update if your logo has a different filename
+import logo from '/logo1.png'   // ← update if your logo has a different filename
 import '../styles/footer.css'
 
 const quickLinks = [
